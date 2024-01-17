@@ -12,21 +12,62 @@
         body {
             font-family: 'Open Sans', sans-serif;
         }
+        
+        .whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    font-size: 30px; /* Adjust icon size as needed */
+    color: #25D366; /* WhatsApp color */
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.whatsapp-icon:hover {
+    animation: pulse 1.5s infinite;
+}
     </style>
 </head>
 
 <body class="bg-white text-gray-700">
+  <a href="YOUR_WHATSAPP_LINK" class="whatsapp-icon" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
     <!-- Navigation -->
     <nav class="bg-blue-900 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo and Brand Name -->
             <a href="#" class="text-xl font-semibold">Heal Voyager</a>
             <!-- Navigation Links -->
-            <div class="hidden md:flex space-x-6">
+<div id="mobileMenu" class="hidden md:flex space-x-6">
                 <a href="#" class="hover:text-gray-300">Home</a>
-                <a href="#" class="hover:text-gray-300">Services</a>
-                <a href="#" class="hover:text-gray-300">About Us</a>
-                <a href="#" class="hover:text-gray-300">Contact</a>
+                <a href="https://www.healvoyager.com/about" class="hover:text-gray-300">About</a>
+                <a href="https://www.healvoyager.com/our-doctors" class="hover:text-gray-300">Doctors</a>
+                <a href="https://www.healvoyager.com/treatments" class="hover:text-gray-300">Treatments</a>
+                <a href="https://www.healvoyager.com/robotic-technologies" class="hover:text-gray-300">Robotic Technologies </a>
+                <a href="https://www.healvoyager.com/facilities" class="hover:text-gray-300">Facilities</a>
+                <a href="https://www.healvoyager.com/faq" class="hover:text-gray-300">FAQ</a>
+                <a href="https://www.healvoyager.com/blog" class="hover:text-gray-300">Blog</a>
+                <a href="https://www.healvoyager.com/contacts" class="hover:text-gray-300">Contacts</a>
+                <a href="https://www.healvoyager.com/treatments" class="hover:text-gray-300">Treatments</a>
+
             </div>
             <!-- Mobile Menu Button -->
             <button class="md:hidden text-lg">
@@ -162,15 +203,18 @@
 
 <!-- Tailwind UI Interactivity - optional if you want to add dropdowns, modals, etc. -->
 <script>
-    // Example script for mobile menu toggle
     document.addEventListener('DOMContentLoaded', function () {
         const menuButton = document.querySelector('nav button');
-        const menuLinks = document.querySelector('nav .md:hidden');
+        const menuLinks = document.getElementById('mobileMenu'); // Updated to target the menu by id
 
         menuButton.addEventListener('click', function () {
-            menuLinks.classList.toggle('hidden');
+            menuLinks.classList.toggle('hidden'); // Toggles visibility
         });
     });
 </script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
 </body>
 </html>
