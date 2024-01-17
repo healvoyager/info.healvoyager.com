@@ -58,30 +58,41 @@
     animation: pulse 1.5s infinite;
 }
     </style>
-</head>
 
     <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "MedicalOrganization",
-        "name": "Heal Voyager",
-        "url": "https://www.healvoyager.com",
-        "logo": "URL_to_Logo",
-        "sameAs": [
-            "https://www.facebook.com/HealVoyager",
-            "https://www.twitter.com/HealVoyager",
-            "https://www.instagram.com/HealVoyager",
-            "https://www.linkedin.com/company/HealVoyager"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-800-HEALVOYAGER",
-            "contactType": "customer service",
-            "areaServed": "Global",
-            "availableLanguage": ["English", "Spanish", "Other Languages"]
+{
+    "@context": "http://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Heal Voyager",
+    "medicalSpecialty": ["Neurology", "Orthopedic", "PhysicalTherapy"],
+    "service": [
+        {
+            "@type": "MedicalProcedure",
+            "name": "Robotic Neuro-Rehabilitation"
+        },
+        {
+            "@type": "MedicalProcedure",
+            "name": "Stroke Rehabilitation"
+        },
+        {
+            "@type": "MedicalProcedure",
+            "name": "Brain Injury Rehabilitation"
+        },
+        {
+            "@type": "MedicalProcedure",
+            "name": "Hip Replacement Surgery"
+        },
+        {
+            "@type": "MedicalProcedure",
+            "name": "Knee Replacement Surgery"
         }
-    }
-    </script>
+    ]
+}
+</script>
+
+</head>
+
+
 
     
 
